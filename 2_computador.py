@@ -45,6 +45,7 @@ def verificarIP():
         ipaddress.ip_address(ip)
     except KeyError as e:
         raise RuntimeError("Isso não é um ip, ERRO") from e
+    os.system("mkdir ips")
     os.system(f'mkdir ips/{ip}')
 
 

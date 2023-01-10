@@ -50,7 +50,11 @@ if __name__ == '__main__':
 
 
     arquivo_baixar = '/etc/shadow'
-    nome_do_arquivo_saida = f'ips/{ip}/shadow'+str(data_agora)
+
+    os.system("mkdir ips")
+    os.system("mkdir ips/script1")
+
+    nome_do_arquivo_saida = f'ips/script1/shadow'+str(data_agora)
     scp.get(arquivo_baixar,nome_do_arquivo_saida)
 
 
