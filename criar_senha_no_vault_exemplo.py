@@ -1,10 +1,20 @@
 import hvac
 import sys
+import os
 
+
+def verificarToken():
+    try:
+        token = os.environ["token_vault"]
+    except KeyError as e:
+        raise RuntimeError("Could not find a token in environment") from e
+    return token
+
+token = verificarToken()
 # Authentication
 client = hvac.Client(
     url='http://127.0.0.1:8200',
-    token='token',
+    token=token,
 )
 
 # Writing a secret
