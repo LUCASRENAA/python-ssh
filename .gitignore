@@ -1,0 +1,7 @@
+.keys
+testes/
+ips/
+venv/
+.idea/
+criar_senha_no_vault.py
+ips.csv
