@@ -1,5 +1,9 @@
 # python-ssh
 
+# Instalar bibliotecas no sistema
+```
+pip install -r requirements.txt 
+```
 
 # Dependencias para o primeiro script
 
